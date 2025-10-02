@@ -18,12 +18,34 @@ background-color:#f6c300 ;
 }
 
 .menu ul li{
-   display: inline-flex;
+   display:flex;
     margin: 0 20px;
-    color: #d42b4a;
+    color: #a4353c;
     cursor:pointer;
-    font-size: 24px; 
+    font-size: 24px;
+   transition: color var(--transition-speed), transform var(--transition-speed);
 }
+
+.menu ul li:hover {
+  transform: scale(1.05);
+  transition: all var(--transition-speed);
+  text-shadow: 1px 1px 8px black;
+}
+    
+nav a{
+    color: #a4353c;
+    text-decoration: none;
+    }
+
+nav a:hover{
+    color: aliceblue;
+    text-shadow: 1px 1px 5px black;
+  transform: translateY(-2px);
+    }
+nav a:active{
+    color: #fb525a;
+    }
+
 
 .logo img{
     width:  35px;
@@ -47,11 +69,20 @@ margin-top: -7px;
     background-origin: border-box;
     background-clip: content-box,border-box;
     
+    
 }
 
 .Signup_btn span{
-    display: block;
+    display: flex;
     padding: 8px 22px;
+   
+}
+
+.Signup_btn:hover {
+  box-shadow: var(--shadow);
+  transform: scale(1.1);
+  transition: all var(--transition-speed);
+  text-shadow: 1px 1px 8px gold;
 }
 
 .header{
@@ -82,6 +113,12 @@ margin-top: -7px;
 
 }
 
+.text h1:hover {
+  color: gold;
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+}
+
 .text p{
     position: relative;
     font-size: 24px;
@@ -89,6 +126,11 @@ margin-top: -7px;
    margin: 30px 0 30px 40px;
    color: rgb(222, 216, 151);
     
+}
+.text p:hover{
+transform: rotate(-1deg);
+  transition: all 0.3s ease;
+
 }
 
 img{
@@ -99,10 +141,16 @@ img{
     margin-top: 12px;
 }
 
+img:hover {
+  box-shadow: var(--shadow);
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
 
 @media (max-width: 992px) {
   .menu ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 20px 0;
   }
@@ -113,7 +161,7 @@ img{
   }
 
   .Signup_btn {
-    position: relative;
+    position: absolute;
     top: auto;
     right: auto;
     margin-top: 15px;
@@ -146,6 +194,24 @@ img{
 }
 
 @media (max-width: 600px) {
+
+  .menu ul {
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .menu  li {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .Signup_btn {
+    
+    top: auto;
+    right: auto;
+    margin-top: 6px;
+  }
   .text h1 {
     font-size: 28px;
   }
@@ -177,14 +243,60 @@ footer{
     width: 50;
   }
 
-nav a{
-    color: #d42b4a;
-    text-decoration: none;
-    }
+  footer:hover {
+  background-color: #574604;
+  transition: background-color 0.3s ease-in-out;
+}
 
-nav a:hover{
-    color: aliceblue;
-    }
-nav a:active{
-    color: #42455a;
-    }
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: goldenrod;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes DEVINA {
+  from {opacity: 0; transform: translateY(-50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+.api-section {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  font-family: 'Pacifico', cursive;
+}
+
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -44,6 +44,7 @@
           <h3>Comfy Dog Bed</h3>
           <p>price: $20.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
       </div>
 
@@ -53,6 +54,7 @@
           <h3>Dog Collar</h3>
           <p>price: $9.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
       </div>
 
@@ -62,6 +64,7 @@
           <h3>Dog food</h3>
           <p>price: $15.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
       </div>
 
@@ -71,6 +74,7 @@
           <h3>Dog leash</h3>
           <p>price: $30.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
 
       </div>
@@ -93,6 +97,7 @@
           <h3>Cat food</h3>
           <p>price: $25.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
     </div>
 
@@ -105,6 +110,7 @@
             <h3>Double Cat Bowl</h3>
             <p>price: $12.00</p>
             <button class="add-to-cart">Add to cart🛒</button>
+            <div class="message">✅ Item has been added to the cart</div>
           </div>
       </div>
 
@@ -115,6 +121,7 @@
           <h3>Litter box</h3>
           <p>price: $50.00</p>
           <button class="add-to-cart">Add to cart🛒</button>
+          <div class="message">✅ Item has been added to the cart</div>
         </div>
     </div>
 
@@ -125,6 +132,7 @@
         <h3>Fur Pin Brush</h3>
         <p>price: $9.00</p>
         <button class="add-to-cart">Add to cart🛒</button>
+        <div class="message">✅ Item has been added to the cart</div>
       </div>
     </div>
     
@@ -136,6 +144,7 @@
       <h3>Plush Cat Nest</h3>
       <p>price: $30.00</p>
       <button class="add-to-cart">Add to cart🛒</button>
+      <div class="message">✅ Item has been added to the cart</div>
 
     </div>
   </div>
@@ -147,6 +156,7 @@
     <h3>Cat Carrier</h3>
     <p>price: $30.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -157,6 +167,7 @@
     <h3>Cat Mouse Toy</h3>
     <p>price: $5.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -168,6 +179,7 @@
     <h3>Laser Pointer</h3>
     <p>price: $4.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -188,6 +200,7 @@
     <h3>Bird Play Area</h3>
     <p>price: $60.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -199,6 +212,7 @@
     <h3>Bird Cage</h3>
     <p>price: $90.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -209,6 +223,7 @@
     <h3>Bird Toy</h3>
     <p>price: $23.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -220,6 +235,7 @@
     <h3>Bird food</h3>
     <p>price: $35.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
 
@@ -230,11 +246,40 @@
     <h3>Bird Cage</h3>
     <p>price: $90.00</p>
     <button class="add-to-cart">Add to cart🛒</button>
+    <div class="message">✅ Item has been added to the cart</div>
   </div>
 </div>
   </section>
 
-  <button> <a href="index.html" class="back-home">Back to Home</a> <br></button>
+  <button> <a href="semi final project.html" class="back-home">Back to Home</a> <br></button>
   <button> <a href="care page.html" class="next page ">Next page about care</a></button>
 
+  <footer class="site-footer">
+    <p>© 2025 ✨DEVINA✨ Website. All rights reserved.</p>
+  </footer>
+
+
+  
+  <script src="products.js"></script>
+  <script>
+const buttons = document.querySelectorAll('.add-to-cart');
+
+buttons.forEach(function(button) {
+
+    button.addEventListener('click', function() {
+
+        const card = button.closest('.card');
+
+        const message = card.querySelector('.message');
+
+        message.style.display = 'block';
+
+        setTimeout(function() {
+            message.style.display = 'none';  
+        }, 3500);
+    });
+});
+
+  </script>
+</body>
 </html>
